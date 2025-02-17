@@ -1,0 +1,44 @@
+/* ItemDetailContainer.css */
+
+.item-detail-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 8px; /* Optional rounded corners */
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container on the page */
+  }
+  
+  .item-detail-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .item-detail-container img {
+    max-width: 100%; /* Image takes full width of container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents image from creating extra space */
+    margin: 10px auto; /* Center the image */
+    border: 1px solid #eee; /* Optional border for the image */
+    border-radius: 4px;   /* Optional rounded borders for image */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  }
+  
+  .item-detail-container p {
+    margin-bottom: 10px;
+    text-align: center; /* Center the description and price */
+  }
+  
+  /* Style the ItemCount component if needed */
+  .item-detail-container .item-count { /* Adjust the selector if your ItemCount has a different class */
+    /* Add styles for the ItemCount component here */
+    margin-top: 20px; /* Space between the price and the item count */
+  }
+  
+  /* Responsive Design (Optional) */
+  @media (max-width: 400px) { /* Adjust breakpoint as needed */
+    .item-detail-container {
+      padding: 10px;
+    }
+  }
