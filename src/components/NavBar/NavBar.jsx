@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import logo from '/assets/lavandero_logo.png';
-import './Navbar.css';
+import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
