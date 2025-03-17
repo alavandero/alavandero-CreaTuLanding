@@ -1,28 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
-const ItemCount = ({ initial, stock, onAdd }) => {
-  const [count, setCount] = useState(initial);
+function ItemCount({ product}) {
+  const [count, setCount] = useState(0)
+  const { addToCart } = useContext(CartContext)
 
-  const increment = () => {
-    if (count < stock) {
-      setCount(count + 1);
-    }
-  };
-
-  const decrement = () => {
-    if (count > initial) {
-      setCount(count - 1);
-    }
-  };
-
+  const handleAdd = () => {
+  }
+  const handleRestar = () => {
+  }
+  const handleAddToCart = () => addToCart({...product, quantity: count})
   return (
     <div>
-      <button onClick={decrement}>-</button>
+      <button onClick={handleRestar}>-</button>
       <span>{count}</span>
-      <button onClick={increment}>+</button>
-      <button onClick={() => onAdd(count)}>Add to Cart</button>
+      <button onClick={handleAdd}>+</button>
+      <button onClick={handleAddToCart}>Agregar al carrito</button>
     </div>
-  );
-};
-
+  )
+}
 export default ItemCount;
